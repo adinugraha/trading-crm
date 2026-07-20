@@ -1,0 +1,158 @@
+-- Sample Data - Trading CRM
+-- Indonesian Trading Company with Realistic Data
+
+USE trading_crm;
+
+-- Insert Main Company
+INSERT INTO companies (name, industry, country, city, address, phone, email, website, description, established_year, annual_revenue) VALUES
+('PT. Global Trading Solutions', 'Trading & Import-Export', 'Indonesia', 'Jakarta', 'Jl. Sudirman No. 88, Jakarta Pusat 12190', '+62-21-5555-0001', 'info@globaltradingsolutions.id', 'www.globaltradingsolutions.id', 'Perusahaan trading terkemuka yang menyediakan solusi import-export untuk berbagai industri', 2010, 150000000000);
+
+-- Insert Clients
+INSERT INTO clients (company_id, name, industry, country, city, address, phone, email, website, description, annual_revenue, employee_count, potential_value) VALUES
+(1, 'PT. Maju Jaya Konstruksi', 'Construction', 'Indonesia', 'Surabaya', 'Jl. Raya Darmo No. 45', '+62-31-7001-0001', 'procurement@majujaya.co.id', 'www.majujaya.co.id', 'Kontraktor utama untuk proyek infrastruktur dan real estate', 250000000000, 500, 5000000000),
+(1, 'CV. Sinar Teknik Mandiri', 'Manufacturing', 'Indonesia', 'Bandung', 'Jl. Gatot Subroto No. 123', '+62-22-2200-5555', 'sales@sinarteknik.com', 'www.sinarteknik.com', 'Produsen mesin dan peralatan industri', 85000000000, 250, 3000000000),
+(1, 'PT. Bintang Usaha Perdagangan', 'Retail Distribution', 'Indonesia', 'Jakarta', 'Jl. Jend. Sudirman No. 200', '+62-21-5000-1234', 'buyer@bintangusaha.co.id', 'www.bintangusaha.co.id', 'Distributor retail untuk produk konsumer', 180000000000, 400, 4500000000),
+(1, 'PT. Sejahtera Logistik Indonesia', 'Logistics', 'Indonesia', 'Medan', 'Jl. Putut Kencono No. 88', '+62-61-3200-0088', 'ops@sejahteraplogistik.com', 'www.sejahteraplogistik.com', 'Penyedia layanan logistik dan warehouse', 120000000000, 300, 2800000000),
+(1, 'PT. Energi Hijau Mandiri', 'Energy & Utilities', 'Indonesia', 'Tangerang', 'Jl. Brigjend Katamso No. 55', '+62-21-5900-0055', 'procurement@energihijau.co.id', 'www.energihijau.co.id', 'Perusahaan energi terbarukan', 200000000000, 350, 6000000000),
+(1, 'PT. Agro Perkasa Nusantara', 'Agriculture & Food', 'Indonesia', 'Lampung', 'Jl. Raden Intan No. 12', '+62-721-700-0012', 'sales@agroperkasa.co.id', 'www.agroperkasa.co.id', 'Produsen hasil pertanian dan olahan makanan', 95000000000, 200, 2500000000),
+(1, 'PT. Digital Inovasi Indonesia', 'Technology', 'Indonesia', 'Jakarta', 'Jl. Kuningan No. 100', '+62-21-2555-0100', 'sales@digiinnovasi.id', 'www.digiinnovasi.id', 'Penyedia solusi teknologi dan software', 75000000000, 150, 2200000000),
+(1, 'PT. Telekomunikasi Strategis', 'Telecommunications', 'Indonesia', 'Jakarta', 'Jl. Gatot Subroto No. 58', '+62-21-7100-0058', 'b2b@telestrategi.co.id', 'www.telestrategi.co.id', 'Provider telekomunikasi dan layanan data', 300000000000, 600, 8000000000),
+(1, 'PT. Properti Sejati Abadi', 'Real Estate', 'Indonesia', 'Jakarta', 'Jl. Benda No. 75', '+62-21-7200-0075', 'corporate@propertisejati.co.id', 'www.propertisejati.co.id', 'Developer properti komersial dan residential', 220000000000, 450, 5500000000),
+(1, 'PT. Perikanan Lestari Jaya', 'Fisheries', 'Indonesia', 'Surabaya', 'Jl. Tanjungsari No. 33', '+62-31-3300-0033', 'export@perikananlejaya.com', 'www.perikananlejaya.com', 'Pengolah dan eksportir produk perikanan', 65000000000, 180, 1800000000),
+(1, 'PT. Garmen Modern Indonesia', 'Textiles & Apparel', 'Indonesia', 'Jakarta', 'Jl. Jatinegara No. 45', '+62-21-8500-0045', 'procurement@garmenmodern.co.id', 'www.garmenmodern.co.id', 'Produsen garmen untuk ekspor', 110000000000, 380, 3200000000),
+(1, 'PT. Pusat Distribusi Otomotif', 'Automotive', 'Indonesia', 'Semarang', 'Jl. Panjang No. 120', '+62-24-6500-0120', 'sales@pusatouto.co.id', 'www.pusatouto.co.id', 'Distributor suku cadang dan aksesori otomotif', 140000000000, 320, 4000000000),
+(1, 'PT. Farmasi Nusantara Jaya', 'Pharmaceutical', 'Indonesia', 'Bandung', 'Jl. Cikutra No. 99', '+62-22-2500-0099', 'sales@farmasinusantara.co.id', 'www.farmasinusantara.co.id', 'Produsen produk farmasi dan suplemen', 105000000000, 220, 3000000000),
+(1, 'PT. Kemasan Terpadu Inovasi', 'Packaging', 'Indonesia', 'Jakarta', 'Jl. Gatot Subroto No. 200', '+62-21-5100-0200', 'sales@kemasaninovasi.co.id', 'www.kemasaninovasi.co.id', 'Produsen kemasan dan kontainer', 80000000000, 160, 2100000000),
+(1, 'PT. Layanan Profesional Manajemen', 'Business Services', 'Indonesia', 'Jakarta', 'Jl. Jend. Sudirman No. 300', '+62-21-5900-0300', 'sales@lpm.co.id', 'www.lpm.co.id', 'Konsultan bisnis dan audit', 60000000000, 120, 1500000000),
+(1, 'PT. Jasa Keuangan Terpercaya', 'Financial Services', 'Indonesia', 'Jakarta', 'Jl. M.H. Thamrin No. 20', '+62-21-2300-0020', 'corporate@jkt.co.id', 'www.jkt.co.id', 'Layanan keuangan dan investasi', 180000000000, 280, 4200000000);
+
+-- Insert Contacts
+INSERT INTO contacts (client_id, first_name, last_name, title, email, phone, mobile, department, is_primary) VALUES
+(1, 'Budi', 'Hartono', 'Procurement Manager', 'budi.hartono@majujaya.co.id', '+62-31-7001-1001', '+62-812-3000-1001', 'Procurement', TRUE),
+(1, 'Siti', 'Widodo', 'Project Manager', 'siti.widodo@majujaya.co.id', '+62-31-7001-1002', '+62-812-3000-1002', 'Project Management', FALSE),
+(1, 'Ahmad', 'Syaiful', 'Operations Head', 'ahmad.syaiful@majujaya.co.id', '+62-31-7001-1003', '+62-812-3000-1003', 'Operations', FALSE),
+(2, 'Rini', 'Maulana', 'Director', 'rini.maulana@sinarteknik.com', '+62-22-2200-5556', '+62-812-4000-2001', 'Management', TRUE),
+(2, 'Eka', 'Prasetya', 'Sales Manager', 'eka.prasetya@sinarteknik.com', '+62-22-2200-5557', '+62-812-4000-2002', 'Sales', FALSE),
+(2, 'Dedi', 'Kusuma', 'Technical Lead', 'dedi.kusuma@sinarteknik.com', '+62-22-2200-5558', '+62-812-4000-2003', 'Technical', FALSE),
+(3, 'Hendra', 'Santoso', 'Procurement Director', 'hendra@bintangusaha.co.id', '+62-21-5000-1235', '+62-812-5000-3001', 'Procurement', TRUE),
+(3, 'Lina', 'Wijaya', 'Regional Manager', 'lina@bintangusaha.co.id', '+62-21-5000-1236', '+62-812-5000-3002', 'Sales', FALSE),
+(4, 'Gunawan', 'Sutrisno', 'Operations Manager', 'gunawan@sejahteraplogistik.com', '+62-61-3200-0089', '+62-812-6000-4001', 'Operations', TRUE),
+(4, 'Yani', 'Kuswoyo', 'Business Development', 'yani@sejahteraplogistik.com', '+62-61-3200-0090', '+62-812-6000-4002', 'Sales', FALSE),
+(5, 'Pambudi', 'Rahartanto', 'Energy Procurement', 'pambudi@energihijau.co.id', '+62-21-5900-0056', '+62-812-7000-5001', 'Procurement', TRUE),
+(5, 'Dewi', 'Listiana', 'Project Coordinator', 'dewi@energihijau.co.id', '+62-21-5900-0057', '+62-812-7000-5002', 'Project Mgmt', FALSE),
+(6, 'Bambang', 'Irawan', 'Purchasing Manager', 'bambang@agroperkasa.co.id', '+62-721-700-0013', '+62-812-8000-6001', 'Procurement', TRUE),
+(6, 'Sri', 'Mulyani', 'Sales Director', 'sri@agroperkasa.co.id', '+62-721-700-0014', '+62-812-8000-6002', 'Sales', FALSE),
+(7, 'Fajar', 'Ramadhan', 'IT Manager', 'fajar@digiinnovasi.id', '+62-21-2555-0101', '+62-812-9000-7001', 'IT', TRUE),
+(7, 'Maya', 'Kusuma', 'Account Manager', 'maya@digiinnovasi.id', '+62-21-2555-0102', '+62-812-9000-7002', 'Sales', FALSE),
+(8, 'Hariono', 'Suryanto', 'Corporate Buyer', 'hariono@telestrategi.co.id', '+62-21-7100-0059', '+62-812-1000-8001', 'Procurement', TRUE),
+(8, 'Ratna', 'Saksama', 'Business Manager', 'ratna@telestrategi.co.id', '+62-21-7100-0060', '+62-812-1000-8002', 'Sales', FALSE),
+(9, 'Yusuf', 'Harahap', 'Director', 'yusuf@propertisejati.co.id', '+62-21-7200-0076', '+62-812-2000-9001', 'Management', TRUE),
+(9, 'Intan', 'Berliana', 'Sales Manager', 'intan@propertisejati.co.id', '+62-21-7200-0077', '+62-812-2000-9002', 'Sales', FALSE),
+(10, 'Tulus', 'Hermawan', 'Export Manager', 'tulus@perikananlejaya.com', '+62-31-3300-0034', '+62-812-3000-0001', 'Sales', TRUE),
+(10, 'Keyla', 'Puspita', 'Operations', 'keyla@perikananlejaya.com', '+62-31-3300-0035', '+62-812-3000-0002', 'Operations', FALSE),
+(11, 'Sartono', 'Widodo', 'Production Manager', 'sartono@garmenmodern.co.id', '+62-21-8500-0046', '+62-812-4000-1001', 'Production', TRUE),
+(11, 'Nurul', 'Ainiyah', 'Export Coordinator', 'nurul@garmenmodern.co.id', '+62-21-8500-0047', '+62-812-4000-1002', 'Sales', FALSE),
+(12, 'Agus', 'Sulistiyo', 'Distribution Head', 'agus@pusatouto.co.id', '+62-24-6500-0121', '+62-812-5000-2001', 'Distribution', TRUE),
+(12, 'Monica', 'Sundari', 'Account Executive', 'monica@pusatouto.co.id', '+62-24-6500-0122', '+62-812-5000-2002', 'Sales', FALSE),
+(13, 'Handoko', 'Wijaya', 'Supply Chain Head', 'handoko@farmasinusantara.co.id', '+62-22-2500-0100', '+62-812-6000-3001', 'Supply Chain', TRUE),
+(13, 'Vina', 'Ratna', 'Sales Representative', 'vina@farmasinusantara.co.id', '+62-22-2500-0101', '+62-812-6000-3002', 'Sales', FALSE),
+(14, 'Julio', 'Raharjo', 'Procurement Manager', 'julio@kemasaninovasi.co.id', '+62-21-5100-0201', '+62-812-7000-4001', 'Procurement', TRUE),
+(14, 'Shinta', 'Dewi', 'Sales Manager', 'shinta@kemasaninovasi.co.id', '+62-21-5100-0202', '+62-812-7000-4002', 'Sales', FALSE),
+(15, 'Ricard', 'Sutarno', 'Finance Director', 'ricard@lpm.co.id', '+62-21-5900-0301', '+62-812-8000-5001', 'Finance', TRUE),
+(15, 'Elma', 'Rosita', 'Project Manager', 'elma@lpm.co.id', '+62-21-5900-0302', '+62-812-8000-5002', 'Operations', FALSE),
+(16, 'Waluyo', 'Gunawan', 'Investment Head', 'waluyo@jkt.co.id', '+62-21-2300-0021', '+62-812-9000-6001', 'Investment', TRUE),
+(16, 'Rina', 'Marlina', 'Relationship Manager', 'rina@jkt.co.id', '+62-21-2300-0022', '+62-812-9000-6002', 'Sales', FALSE);
+
+-- Insert Deals
+INSERT INTO deals (company_id, client_id, title, description, value, stage_id, probability_percent, expected_close_date) VALUES
+(1, 1, 'Supply Besi Beton untuk Proyek Gedung A', 'Pengadaan besi beton grade 40 untuk proyek konstruksi gedung perkantoran', 2500000000, 6, 100, '2024-08-15'),
+(1, 1, 'Semen Portland dan Material Konstruksi Lainnya', 'Paket lengkap material konstruksi untuk fase 2 proyek', 1800000000, 5, 80, '2024-09-20'),
+(1, 2, 'Mesin CNC Impor dari Taiwan', 'Mesin CNC untuk meningkatkan kapasitas produksi', 3500000000, 4, 75, '2024-10-30'),
+(1, 2, 'Spare Parts Mesin Produksi', 'Berbagai spare parts untuk maintenance', 750000000, 2, 45, '2024-11-15'),
+(1, 3, 'Paket Distributor Produk Elektronik', 'Paket wholesale elektronik consumer grade', 5500000000, 4, 70, '2024-10-15'),
+(1, 3, 'Produk Perawatan Rumah Tangga Besar-besaran', 'Supply produk cleaning dan household items', 2200000000, 3, 55, '2024-11-30'),
+(1, 4, 'Layanan Warehouse Ekspansi 2 tahun', 'Sewa warehouse dengan kapasitas 5000 m²', 4000000000, 5, 85, '2024-09-25'),
+(1, 4, 'Sistem Manajemen Logistik Cloud', 'Software TMS untuk optimasi distribusi', 650000000, 2, 40, '2024-12-10'),
+(1, 5, 'Panel Surya 500 KWp', 'Instalasi panel surya untuk fasilitas manufaktur', 8000000000, 4, 72, '2024-11-20'),
+(1, 5, 'Baterai Penyimpanan Energi 1MWh', 'Battery storage system untuk optimasi beban', 6500000000, 3, 50, '2024-12-15'),
+(1, 6, 'Pestisida dan Pupuk Berkualitas Tinggi', 'Supply pestisida organik dan pupuk untuk 500 hektar', 1200000000, 2, 35, '2024-11-10'),
+(1, 6, 'Peralatan Pertanian Modern', 'Traktor dan mesin panen berteknologi', 3200000000, 3, 60, '2024-12-20'),
+(1, 7, 'Sistem ERP Kustomisasi untuk Manufaktur', 'Enterprise Resource Planning system yang disesuaikan', 1500000000, 3, 55, '2024-10-25'),
+(1, 7, 'Cloud Migration Service 6 bulan', 'Migrasi data dan aplikasi ke cloud infrastructure', 900000000, 2, 38, '2024-11-05'),
+(1, 8, 'Jaringan Fiber Optic Tier 1', 'Upgrade infrastruktur komunikasi backbone', 7500000000, 5, 88, '2024-09-10'),
+(1, 8, 'Hardware Telekomunikasi Bekas Upgrade', 'Switch dan router untuk jaringan cabang', 1300000000, 4, 65, '2024-10-20'),
+(1, 9, 'Material Konstruksi dan Dekorasi Premium', 'Material finishing untuk unit apartemen luxury', 4200000000, 4, 68, '2024-11-10'),
+(1, 9, 'Furniture dan Appliances Built-in', 'Supply furniture dan kitchen appliances mewah', 3800000000, 3, 52, '2024-12-05'),
+(1, 10, 'Kontainer Pendingin untuk Ekspor Udang', '20 unit cold container untuk supply chain', 2600000000, 3, 58, '2024-11-18'),
+(1, 10, 'Sertifikasi dan Registrasi Seafood Export', 'Jasa konsultasi dan sertifikasi food safety', 450000000, 1, 25, '2025-01-30'),
+(1, 11, 'Bahan Baku Tekstil Berkualitas Ekspor', 'Cotton dan synthetic fiber untuk produksi', 3300000000, 4, 70, '2024-10-28'),
+(1, 11, 'Mesin Tenun Otomatis Impor', '5 unit mesin tenun untuk peningkatan kapasitas', 5200000000, 2, 42, '2024-12-15'),
+(1, 12, 'Ban Mobil Branded untuk Distributor', 'Supply ban premium dari manufacturer ternama', 2800000000, 3, 62, '2024-11-22'),
+(1, 12, 'Oli dan Cairan Perawatan Otomotif', 'Paket besar oli dan cairan perawatan kendaraan', 1100000000, 2, 45, '2024-12-01'),
+(1, 13, 'Bahan Baku Farmasi Raw Material', 'API dan excipient untuk formulasi obat', 2400000000, 4, 75, '2024-10-15'),
+(1, 13, 'Peralatan Laboratorium dan QC', 'Instrumen lab dan peralatan quality control', 850000000, 3, 55, '2024-11-20'),
+(1, 14, 'Film Plastik dan Kemasan Flexible', 'Roll film plastik untuk packaging produk', 1600000000, 2, 48, '2024-11-25'),
+(1, 14, 'Mesin Produksi Kemasan Otomatis', 'Mesin packaging otomatis high speed', 4500000000, 1, 30, '2025-02-10'),
+(1, 15, 'Audit dan Konsultasi Pajak 3 Tahun', 'Paket audit dan tax consulting comprehensif', 900000000, 3, 65, '2024-11-30'),
+(1, 15, 'Sistem Akuntansi Terintegrasi', 'Implementasi accounting software dan training', 550000000, 1, 22, '2025-01-20'),
+(1, 16, 'Portfolio Obligasi Korporat', 'Investasi obligasi dari perusahaan publik', 12000000000, 5, 92, '2024-08-30'),
+(1, 16, 'Instrumen Reksadana Saham Berkembang', 'Paket reksadana untuk diversifikasi portfolio', 3000000000, 2, 40, '2024-12-10');
+
+-- Insert Activities
+INSERT INTO activities (deal_id, client_id, contact_id, type_id, title, description, activity_date, duration_minutes, notes) VALUES
+(1, 1, 1, 1, 'Meeting Kick-off Proyek Gedung A', 'Diskusi detail material dan timeline pengiriman dengan tim procurement Maju Jaya', '2024-07-15 10:00:00', 90, 'Disetujui timeline: pengiriman 3 batch, garansi 5 tahun'),
+(1, 1, 1, 2, 'Konfirmasi Email Spesifikasi Besi Beton', 'Mengirim detail spesifikasi dan sertifikat mutu material', '2024-07-16 14:30:00', 0, 'Sudah diterima dan disetujui client'),
+(2, 1, 1, 4, 'Follow-up Material untuk Fase 2', 'Reminder untuk diskusi material fase 2 proyek gedung', '2024-07-18 09:00:00', 30, 'Rencanakan meeting detail bulan depan'),
+(2, 1, 2, 1, 'Meeting Teknis dengan Project Manager', 'Review spesifikasi teknis dengan project manager Siti Widodo', '2024-07-20 15:00:00', 60, 'Semua requirement teknis sudah aligned'),
+(3, 2, 4, 1, 'Meeting Presentasi Mesin CNC Taiwan', 'Demo mesin dan penjelasan spesifikasi teknis mesin CNC', '2024-07-10 13:00:00', 120, 'Client sangat tertarik dengan teknologi dan harga'),
+(3, 2, 5, 2, 'Email Proposal Mesin CNC Lengkap', 'Mengirim proposal detail dengan quotation dan payment terms', '2024-07-12 11:00:00', 0, 'Menunggu response dari klien'),
+(3, 2, 5, 6, 'Follow-up Proposal Mesin CNC', 'Menanyakan progress evaluasi proposal dari sisi client', '2024-07-22 10:30:00', 30, 'Client sedang dalam tahap evaluasi internal'),
+(4, 2, 5, 4, 'Diskusi Spare Parts dan Timeline', 'Gathering kebutuhan spare parts untuk preventive maintenance', '2024-07-25 14:00:00', 45, 'Spare parts akan dikirim per quarter'),
+(5, 3, 7, 1, 'Meeting Introduksi Paket Distributor', 'Presentasi paket wholesale lengkap dan margin keuntungan', '2024-07-08 10:00:00', 100, 'Paket sangat menarik untuk retail network'),
+(5, 3, 7, 3, 'Proposal Harga Paket Elektronik Dikirim', 'Pengiriman proposal dengan breakdown produk dan pricing', '2024-07-10 09:00:00', 0, 'Menunggu persetujuan dari tim buyer'),
+(6, 3, 8, 1, 'Diskusi Produk Household dengan Regional Manager', 'Review list produk household dan volume bulanan', '2024-07-18 15:30:00', 75, 'Perlu menyesuaikan brand dan packaging'),
+(7, 4, 9, 1, 'Presentasi Layanan Warehouse Expansion', 'Presentasi lokasi warehouse baru dan fasilitas lengkap', '2024-07-05 11:00:00', 110, 'Lokasi strategis, harga kompetitif, fasilitas modern'),
+(7, 4, 9, 4, 'Email Lease Term dan Conditions', 'Mengirim kontrak sewa warehouse dengan terms pembayaran', '2024-07-08 16:00:00', 0, 'Terms sudah final, tinggal eksekusi'),
+(8, 4, 10, 1, 'Demo Software TMS Cloud', 'Demonstrasi platform TMS dan integrasi dengan sistem existing', '2024-07-20 13:00:00', 60, 'Interface user-friendly, fitur lengkap'),
+(9, 5, 11, 1, 'Site Inspection dan Proposal Panel Surya', 'Kunjungan lokasi dan analisis kebutuhan solar panel', '2024-07-01 09:00:00', 180, 'ROI 7 tahun, subsidi pemerintah tersedia'),
+(9, 5, 11, 3, 'Proposal Teknis Panel Surya Dikirim', 'Pengiriman proposal detail dengan design dan spesifikasi', '2024-07-06 10:00:00', 0, 'Proposal sedang dalam review manajemen'),
+(9, 5, 12, 1, 'Meeting dengan Project Coordinator', 'Diskusi timeline implementasi dan contractor pilihan', '2024-07-25 14:30:00', 90, 'Kontractor sudah ditunjuk, ready start September'),
+(10, 5, 12, 4, 'Catatan Technical Specifications Battery Storage', 'Update spesifikasi teknis dan kapasitas battery storage', '2024-07-27 10:00:00', 30, 'Butuh battery 1.2MWh untuk optimal'),
+(11, 6, 13, 1, 'Meeting Agronomis dan Kebutuhan Produk', 'Diskusi kebutuhan pestisida dan pupuk untuk musim tanam', '2024-07-14 08:00:00', 120, 'Rekomendasi produk premium dengan harga kompetitif'),
+(12, 6, 14, 1, 'Demo Mesin Pertanian Modern', 'Presentasi traktor dan mesin panen teknologi terbaru', '2024-07-22 10:00:00', 100, 'Financing tersedia, bunga 5% per tahun'),
+(13, 7, 15, 1, 'ERP Requirement Gathering Session', 'Workshop intensive untuk mengumpulkan requirement detail', '2024-07-10 09:00:00', 240, 'Requirements sudah final, customization dimulai'),
+(13, 7, 15, 3, 'Proposal ERP Implementation Dikirim', 'Mengirim proposal dengan timeline 4 bulan', '2024-07-18 15:00:00', 0, 'Budgeting sudah approved, ready sign contract'),
+(14, 7, 16, 1, 'Meeting Cloud Migration Planning', 'Diskusi infrastruktur cloud dan migration strategy', '2024-07-19 11:00:00', 90, 'Google Cloud platform dipilih'),
+(15, 8, 17, 1, 'Presentasi Jaringan Fiber Tier 1', 'Presentasi teknologi fiber optic dan keuntungan bandwidth', '2024-06-28 13:00:00', 120, 'Client sangat impressed dengan teknologi'),
+(15, 8, 17, 3, 'Proposal Jaringan Fiber Lengkap Dikirim', 'Proposal teknis dan komersial, coverage nasional', '2024-07-02 10:00:00', 0, 'Proposal dalam final approval board'),
+(15, 8, 17, 4, 'Follow-up Board Decision Status', 'Menanyakan status board approval untuk kontrak fiber', '2024-07-26 09:30:00', 20, 'Approval expected akhir Agustus'),
+(16, 8, 18, 1, 'Meeting Hardware Refresh Initiative', 'Diskusi kebutuhan switch dan router untuk branch offices', '2024-07-20 14:00:00', 60, 'Budget sudah ready, procurement Q3'),
+(17, 9, 19, 1, 'Meeting Material Konstruksi Luxury', 'Presentasi material finishing premium dari supplier internasional', '2024-07-08 10:00:00', 110, 'Material dipilih untuk 200 unit apartment'),
+(17, 9, 19, 3, 'Quotation Material Finishing Dikirim', 'Penawaran harga dan term pembayaran material konstruksi', '2024-07-12 16:00:00', 0, 'Menunggu approval desainer interior'),
+(18, 9, 20, 1, 'Meeting Furniture dan Kitchen Appliances', 'Presentasi koleksi furniture dan built-in appliances', '2024-07-15 11:00:00', 90, 'Desain dan spesifikasi sudah final'),
+(19, 10, 21, 1, 'Meeting Cold Container Supply', 'Diskusi spesifikasi container dan logistics solution', '2024-07-12 09:00:00', 100, 'Container siap delivery Agustus'),
+(19, 10, 21, 3, 'Proposal Cold Container Dikirim', 'Penawaran harga dan maintenance contract', '2024-07-15 14:00:00', 0, 'Persetujuan dari export manager'),
+(20, 10, 22, 1, 'Meeting Sertifikasi Seafood Export', 'Diskusi proses sertifikasi dan compliance requirement', '2024-07-28 10:00:00', 75, 'Timeline sertifikasi 3 bulan'),
+(21, 11, 23, 1, 'Meeting Bahan Baku Tekstil', 'Diskusi spesifikasi cotton dan synthetic fiber', '2024-07-10 11:00:00', 95, 'Kualitas dan harga sangat kompetitif'),
+(21, 11, 23, 3, 'Proposal Bahan Baku Tekstil Dikirim', 'Proposal dengan sample dan price per kilo', '2024-07-13 10:00:00', 0, 'Menunggu sample approval'),
+(22, 11, 24, 1, 'Demo Mesin Tenun Otomatis', 'Presentasi mesin tenun teknologi Jepang terbaru', '2024-07-25 13:00:00', 120, 'Kapasitas produksi naik 300%'),
+(23, 12, 25, 1, 'Meeting Ban Mobil Branded', 'Diskusi stok ban dari berbagai brand internasional', '2024-07-16 10:00:00', 85, 'Harga distributor dengan margin 25%'),
+(23, 12, 25, 3, 'Proposal Ban Mobil Branded Dikirim', 'Penawaran dengan berbagai pilihan brand dan size', '2024-07-18 15:30:00', 0, 'PO ready Q3'),
+(24, 12, 26, 1, 'Meeting Oli dan Cairan Perawatan', 'Diskusi jenis oli dan cairan untuk aftermarket', '2024-07-20 14:00:00', 60, 'Produk original bergaransi'),
+(25, 13, 27, 1, 'Meeting Bahan Baku Farmasi', 'Diskusi API dan excipient untuk formulasi obat', '2024-07-08 09:00:00', 110, 'Sertifikat halal dan BPOM lengkap'),
+(25, 13, 27, 3, 'Proposal Bahan Baku Farmasi Dikirim', 'Proposal dengan COA dan sertifikat mutu', '2024-07-12 11:00:00', 0, 'Approval dari QA department'),
+(26, 13, 28, 1, 'Meeting Peralatan Lab dan QC', 'Presentasi instrumen lab kalibrasi sertifikat', '2024-07-22 10:00:00', 75, 'Garansi service 3 tahun included'),
+(27, 14, 29, 1, 'Meeting Film Plastik Packaging', 'Diskusi jenis film plastik untuk berbagai produk', '2024-07-18 14:00:00', 80, 'Minimum order 100 roll per bulan'),
+(28, 14, 30, 1, 'Demo Mesin Kemasan Otomatis', 'Presentasi mesin kemasan dan investasi terkait', '2024-07-28 11:00:00', 100, 'ROI 2 tahun, maintenance support included'),
+(29, 15, 31, 1, 'Meeting Audit dan Konsultasi Pajak', 'Diskusi scope audit dan tax planning strategy', '2024-07-10 15:00:00', 120, 'Tax saving potential 5-10%'),
+(29, 15, 31, 3, 'Proposal Audit dan Tax Consulting Dikirim', 'Proposal dengan scope dan fee struktur', '2024-07-14 10:00:00', 0, 'Board approval diharapkan'),
+(30, 16, 33, 1, 'Meeting Portfolio Obligasi Korporat', 'Presentasi obligasi dari 10+ perusahaan publik terpilih', '2024-07-05 10:00:00', 100, 'Yield 6.5%, duration 5 tahun'),
+(30, 16, 33, 4, 'Email Dokumen Obligasi dan Prospectus', 'Pengiriman prospectus dan rating documents', '2024-07-08 14:00:00', 0, 'Investment committee review sedang berjalan'),
+(30, 16, 33, 6, 'Follow-up Investment Committee Decision', 'Menanyakan status decision dari investment committee', '2024-07-25 09:00:00', 15, 'Approval expected minggu depan'),
+(31, 16, 34, 1, 'Meeting Instrumen Reksadana', 'Diskusi strategi diversifikasi dan product suitability', '2024-07-20 11:00:00', 90, 'Strategi growth dengan managed risk');
+
+-- Verify data insertion
+SELECT COUNT(*) as total_clients FROM clients;
+SELECT COUNT(*) as total_contacts FROM contacts;
+SELECT COUNT(*) as total_deals FROM deals;
+SELECT COUNT(*) as total_activities FROM activities;
